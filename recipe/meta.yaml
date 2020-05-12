@@ -1,17 +1,17 @@
 {% set name = "pdb_manip_py" %}
-{% set version = "1.1.2" %}
+{% set version = "1.2.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: ad53f0868fa92646f44b32ff122c7e5fe4307814f56cd7f9adb02a08567117b1
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: eeba6268cbab0a58c80657e060ad805b8b1e574a5a1aa37d46809b485ee9ef78
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -35,10 +35,10 @@ test:
     - pytest --pyargs pdb_manip_py --doctest-modules
 
 about:
-  home: "https://github.com/samuelmurail/pdb_manip_py"
-  license: "GPL-2.0-only"
+  home: https://github.com/samuelmurail/pdb_manip_py
+  license: GPL-2.0-only
   license_file: LICENSE
-  summary: "Pdb_Manip_py is a python library allowing simple operations on pdb coor files."
+  summary: Pdb_Manip_py is a python library allowing simple operations on pdb coor files.
   doc_url: https://pdb-manip-py.readthedocs.io
 
 extra:
