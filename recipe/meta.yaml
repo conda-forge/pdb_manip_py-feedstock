@@ -1,5 +1,5 @@
 {% set name = "pdb_manip_py" %}
-{% set version = "1.2.4" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eb86106f4b2945c9ce3e6ced237f62308afa3556a9c3fd218b648817776f0944
+  sha256: bbc0259a3e2dfff778a9687db2e9983439e3fd3228d8c658da9defb3a0e0a10e
 
 build:
   number: 0
