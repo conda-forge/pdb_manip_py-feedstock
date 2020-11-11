@@ -5,11 +5,11 @@ Home: https://github.com/samuelmurail/pdb_manip_py
 
 Package license: GPL-2.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pdb_manip_py-feedstock/blob/master/LICENSE.txt)
 
 Summary: Pdb_Manip_py is a python library allowing simple operations on pdb coor files.
 
-
+Documentation: https://pdb-manip-py.readthedocs.io
 
 Current build status
 ====================
