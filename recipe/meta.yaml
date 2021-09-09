@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a0ae46f051f8457c906398ffb0b4a235bbda8881b58287d7576bc4c5735127b8
+  sha256: 3f0aeb21be5a14279b60acb377ac1e41e69374c453aeb5570bdb7dce1c94b21d
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - numpy
     - scipy >=1.4.0
     - os_command_py >=1.1.0
-    - pdb2pqr >= 3.2.0
+    - pdb2pqr >=3.2.0
 
 test:
   imports:
