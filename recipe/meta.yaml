@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2e82ae2d379c133089beede6c5215182f513590355a07fda6192e1b25f661e4a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
 
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - numpy
     - scipy >=1.4.0
     - os_command_py >=1.1.0
@@ -32,6 +32,7 @@ test:
     - pdb_manip_py.pdb_manip
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - pytest --pyargs pdb_manip_py --doctest-modules
 
